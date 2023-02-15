@@ -1,12 +1,12 @@
-// import "../styles/header.css"
+import Navigation from "./Navigation"
 
 const Header = () => {
     return(
         <header className="header">
             <div className="header__logo">
-                <img src="assets/kasaLogo.svg" width={200} height={200} alt="kasa logo"/>
+                <img src="assets/kasaLogo.svg" className="header__img" alt="kasa logo"/>
             </div>
-            <nav className="header__nav"> navigation</nav>
+            <Navigation />
         </header>
     )
 }

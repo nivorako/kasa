@@ -3,4 +3,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2rem;
+    &__logo{
+        img{
+            width: rem-calc(100);
+            height: rem-calc(68);
+        }
+    }
 }

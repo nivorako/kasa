@@ -1,14 +1,29 @@
+$base-font-size: 16px;
+
+@function trim-unit($value){
+    @return $value / ($value * 0 + 1);
+}
+
+@function rem-calc($value){
+    @return $value / trim-unit($base-font-size) * 1rem;
+}
+
 *{
-    font-size: 16px;
+    font-size: $base-font-size*1.5;
+}
+
+ul{
+    padding: 0;
 }
 
 body{
     box-sizing: border-box;
-    margin: 0 8em;
+    margin: 0 5%;
     padding: 0;
 }
 
 .home{
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
