@@ -4,8 +4,8 @@ import About from "./pages/About"
 import Home from "./pages/Home"
 import Housing from "./pages/Housing"
 import NotFound from "./pages/NotFound"
-import "./styles/App.css"
 
+import "./styles/styles.scss"
 
 function App() {
     return (
