@@ -1,6 +1,7 @@
 .navigation{
     width: 30%;
     margin-left: 0;
+    transition: ease all .5s;
     @media screen and (max-width: 800px) {
         width: 50%;
     }
@@ -15,6 +16,9 @@
     a{
         text-decoration: none;
         color: $primary;
+    }
+    &__nav.active{
+        border-bottom: thin solid $primary;
     }
 }
 
