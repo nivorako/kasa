@@ -1,39 +1,20 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Baner from "../components/Baner"
+import Banner from "../components/Banner"
+
+import bannerAbout from "../assets/bannerAbout.jpg"
+import Cards from "../components/Cards"
 
 export default function About(){
     return(
         <div className="about">
             <Header />
             <main className="about__content">
-                <Baner />
-                <section className="about__content">
-                    <div className="card">a</div>
-                    <div className="card">bmploikju</div>
-                    <div className="card">c</div>
-                    <div className="card">d</div>
-                    <div className="card">e</div>
-                    <div className="card">f</div>
-                    <div className="card">a</div>
-                    <div className="card">bmploikju</div>
-                    <div className="card">c</div>
-                    <div className="card">d</div>
-                    <div className="card">e</div>
-                    <div className="card">f</div>
-                    <div className="card">a</div>
-                    <div className="card">bmploikju</div>
-                    <div className="card">c</div>
-                    <div className="card">d</div>
-                    <div className="card">e</div>
-                    <div className="card">f</div>
-                    <div className="card">a</div>
-                    <div className="card">bmploikju</div>
-                    <div className="card">c</div>
-                    <div className="card">d</div>
-                    <div className="card">e</div>
-                    <div className="card">f</div>
-                </section>
+                <Banner 
+                    imgSrc={bannerAbout}
+                    altTxt="paysage"
+                />
+                <Cards />
             </main>
             <Footer />
         </div>

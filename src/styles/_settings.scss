@@ -1,6 +1,6 @@
 $base-font-size: 16px;
 $primary: #FF6060;
-$bannerImgHeight: 200px;
+$bannerImgHeight: 150px;
 
 @function trim-unit($value){
     @return $value / ($value * 0 + 1);
