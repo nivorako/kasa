@@ -1,0 +1,12 @@
+.cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    div{
+        width: 350px;
+        height: 300px;
+        background-color: $primary;
+        margin: 10px;
+    }
+}
