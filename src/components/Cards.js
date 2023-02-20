@@ -6,14 +6,24 @@ export default function Cards(){
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // async function fetchData(){
+    //     const res = await fetch("../../public/data/housing.json")
+    //     const data = await res.json()
+    //     setData(data)
+    // }
+
+    // useEffect(() => {
+    //     fetchData()
+    // }, [])
+
     useEffect(() => {
-        fetch("..src/datas/housing.json")
+        fetch("./data/housing.json")
             .then((res) => {
                 if(!res.ok) {
                     throw new Error(`This is an HTTP error: The status is ${res.status}`)
                 }
-                console.log("actualData :", res.json())
-                return res.json()
+                const response = res.json()
+                return response
             })
             .then((actualData) => {
                 console.log("actualData :", actualData)
@@ -34,11 +44,11 @@ export default function Cards(){
             {error && (
                 <div>{`There is a problem fetching the post data - ${error}`}</div>
             )}
-            <ul>
+            <ul className="cards__items">
                 {data &&
                 data.map(({ id, title }) => (
                     <li key={id}>
-                    <h3>{title}</h3>
+                        <h3>{title}</h3>
                     </li>
                 ))}
             </ul>
