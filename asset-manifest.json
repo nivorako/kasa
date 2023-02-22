@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nivorako/kasa/static/css/main.7fca1afd.css",
+    "main.js": "/nivorako/kasa/static/js/main.6cdb9fc0.js",
+    "static/media/bannerHome.png": "/nivorako/kasa/static/media/bannerHome.7b295fcb71808167cd75.png",
+    "static/media/bannerAbout.jpg": "/nivorako/kasa/static/media/bannerAbout.04a75d3e58cc2494cc20.jpg",
+    "index.html": "/nivorako/kasa/index.html",
+    "main.7fca1afd.css.map": "/nivorako/kasa/static/css/main.7fca1afd.css.map",
+    "main.6cdb9fc0.js.map": "/nivorako/kasa/static/js/main.6cdb9fc0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fca1afd.css",
+    "static/js/main.6cdb9fc0.js"
+  ]
+}
