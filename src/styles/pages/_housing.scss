@@ -1,0 +1,21 @@
+.housing{
+    &__content{
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__carrousel{
+        width: 100%;
+        img{
+            width: 100%;
+            height: $bannerImgHeight*3;
+            object-fit: cover;
+            border-radius: $borderRadius;
+            object-position: center 44%;
+            filter: opacity(90%) brightness(70%);
+        }
+    }
+}

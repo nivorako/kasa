@@ -14,11 +14,44 @@ export default function Housing(){
         <div className="housing">
             <Header />
             <main className="housing__content">
-                <section className="housing__banner">
+                <section className="housing__carrousel">
                     <img src={selectedId.cover} alt="" />
                 </section>
 
-                <section>
+                <section className="housing__details">
+                    <div className="housing__detailsHeader">
+                        <div className="housing__detailsTitle">
+                            <h2>{selectedId.title}</h2>
+                            <p>{selectedId.location} </p>
+                            <ul>
+                                {
+                                    selectedId.tags.map((tag, index) => (
+                                        <li key={index} >
+                                            {tag}
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                        <div className="housing__detailsHost">
+                            <p>{selectedId.host.name} </p>
+                            <img src={selectedId.host.picture} alt=""></img>
+                        </div>
+                    </div>
+                    <article className="housing__detailsArticle">
+                        <div>
+                            <h3>Description</h3>
+                            <p>
+                                Et irure et nulla cillum et officia labore irure. Pariatur anim sint voluptate laborum commodo aliquip nostrud velit reprehenderit quis commodo. Do minim sunt et Lorem in mollit cupidatat labore. Eiusmod commodo ut aliquip minim incididunt est deserunt dolore ex.  
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Equipement</h3>
+                            <p>
+                                Et irure et nulla cillum et officia labore irure. Pariatur anim sint voluptate laborum commodo aliquip nostrud velit reprehenderit quis commodo. Do minim sunt et Lorem in mollit cupidatat labore. Eiusmod commodo ut aliquip minim incididunt est deserunt dolore ex.  
+                            </p>
+                        </div>
+                    </article>
                        
                 </section>
             </main>
