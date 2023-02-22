@@ -6,7 +6,8 @@ import Cards from "../components/Cards"
 import bannerHome from "../assets/bannerHome.png"
 // import "../styles/home.css"
 
-export default function Home() {
+export default function Home({data}) {
+    
     return (
         <div className="home">
             <Header />
@@ -16,7 +17,9 @@ export default function Home() {
                     title="Chez vous, partout et ailleurs"
                     altTxt="paysage terre et mer"
                 />
-                <Cards />
+                <Cards 
+                    data={data}
+                />
             </main>
             <Footer />
         </div>

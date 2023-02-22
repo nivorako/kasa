@@ -5,10 +5,10 @@ import Home from "./pages/Home"
 import Housing from "./pages/Housing"
 import NotFound from "./pages/NotFound"
 
-
 import "./styles/styles.scss"
 
 function App() {
+    
     
     return (
         <Router>
@@ -16,14 +16,14 @@ function App() {
                 <Route 
                     path="/" 
                     element={<Home />} 
-                   
+                    
                 />
                 <Route  
                     path="/About" 
                     element={<About />}
                 />
                 <Route 
-                    path="/Housing" 
+                    path="/Housing/:id" 
                     element={<Housing />} 
                 />
                 <Route 
