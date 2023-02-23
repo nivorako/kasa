@@ -18,4 +18,24 @@
             filter: opacity(90%) brightness(70%);
         }
     }
+    &__detailsHeader{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__detailsHost{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__detailsHostName{
+        display: flex;
+        align-items: center;
+        img{
+            border-radius: 50%;
+        }
+        p{
+            margin-right: 1rem;
+        }
+    }
 }

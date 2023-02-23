@@ -15,7 +15,7 @@ export default function Housing(){
             <Header />
             <main className="housing__content">
                 <section className="housing__carrousel">
-                    <img src={selectedId.cover} alt="" />
+                    <img src={selectedId.cover} alt={selectedId.title} />
                 </section>
 
                 <section className="housing__details">
@@ -34,8 +34,11 @@ export default function Housing(){
                             </ul>
                         </div>
                         <div className="housing__detailsHost">
-                            <p>{selectedId.host.name} </p>
-                            <img src={selectedId.host.picture} alt=""></img>
+                            <div className="housing__detailsHostName">
+                                <p>{selectedId.host.name} </p>
+                                <img src={selectedId.host.picture} alt=""></img>
+                            </div>
+                            <div>rating etoiles</div>
                         </div>
                     </div>
                     <article className="housing__detailsArticle">
