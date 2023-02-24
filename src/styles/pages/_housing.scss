@@ -60,6 +60,7 @@
         align-items: center;
         img{
             border-radius: 50%;
+            width: 80px;
         }
         p{
             margin-right: 1rem;
@@ -67,7 +68,14 @@
     }
     &__detailsArticle{
         display: flex;
+        margin-bottom: 1rem;
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
         h3{
+            margin-top: 0;
             padding: 1rem;
             color: white;
             background-color: $primary;
@@ -76,12 +84,22 @@
         }
         p{
             font-size: $base-font-size;
+            margin: 1rem;
         }
     }
     &__detailsArticleDesc{
-        margin-right: .2rem;
+        margin-right: 2rem;
+        background-color: rgb(243, 243, 243);
+        @media screen and (max-width: 800px) {
+            margin-right: 0; 
+            margin-bottom: 1rem; 
+        }
     }
     &__detailsArticleEquipmt{
-        margin-left: .2rem;
+        margin-left: 2rem;
+        background-color: rgb(243, 243, 243);
+        @media screen and (max-width: 800px) {
+            margin-left: 0;  
+        }
     }
 }

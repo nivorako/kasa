@@ -7,10 +7,14 @@ export default function Rating({rating}){
     }
    
     return (
-          <div>
+          <div className="rating">
             {
                 tabRating.map((tabElt) => (
-                    tabElt > 0 ? <img key={tabElt.toString()} src={star} alt=""></img> : null
+                    tabElt > 0 ? 
+                        <span className="rating__img">
+                            <img key={tabElt.toString()} src={star} alt="" />
+                        </span> 
+                    : null
                 ))
             } 
           </div>
