@@ -23,6 +23,33 @@
         display: flex;
         justify-content: space-between;
     }
+    &__detailsTitle{
+        width: 50%;
+        h2{
+            font-size: $base-font-size*2;
+            font-weight: 100;
+        }
+        p{
+            font-size: $base-font-size;
+        }
+        ul{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            list-style-type: none;
+            margin-bottom: 0;
+        }
+        li{
+            color: white;
+            background-color: $primary;
+            border-radius: $borderRadius;
+            padding: .2rem .5rem;
+            font-size: $base-font-size;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
     &__detailsHost{
         display: flex;
         flex-direction: column;
@@ -37,5 +64,24 @@
         p{
             margin-right: 1rem;
         }
+    }
+    &__detailsArticle{
+        display: flex;
+        h3{
+            padding: 1rem;
+            color: white;
+            background-color: $primary;
+            border-radius: $borderRadius;
+            font-size: $base-font-size;
+        }
+        p{
+            font-size: $base-font-size;
+        }
+    }
+    &__detailsArticleDesc{
+        margin-right: .2rem;
+    }
+    &__detailsArticleEquipmt{
+        margin-left: .2rem;
     }
 }
