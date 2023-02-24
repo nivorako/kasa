@@ -88,18 +88,25 @@
         }
     }
     &__detailsArticleDesc{
+        width: 50%;
         margin-right: 2rem;
         background-color: rgb(243, 243, 243);
+        border-radius: $borderRadius;
         @media screen and (max-width: 800px) {
             margin-right: 0; 
             margin-bottom: 1rem; 
         }
     }
     &__detailsArticleEquipmt{
+        width: 50%;
         margin-left: 2rem;
         background-color: rgb(243, 243, 243);
+        border-radius: $borderRadius;
         @media screen and (max-width: 800px) {
             margin-left: 0;  
+        }
+        ul{
+            list-style-type: none;
         }
     }
 }

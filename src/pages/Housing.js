@@ -6,6 +6,7 @@ import Rating from "../components/Rating"
 import dataHousing from "../data/housing.json"
 
 import { useParams } from "react-router-dom"
+import Collapse from "../components/Collapse"
 
 export default function Housing(){
     const {id} = useParams()
@@ -46,16 +47,16 @@ export default function Housing(){
                     </div>
                     <article className="housing__detailsArticle">
                         <div className="housing__detailsArticleDesc">
-                            <h3>Description</h3>
-                            <p>
-                                Et irure et nulla cillum et officia labore irure. Pariatur anim sint voluptate laborum commodo aliquip nostrud velit reprehenderit quis commodo. Do minim sunt et Lorem in mollit cupidatat labore. Eiusmod commodo ut aliquip minim incididunt est deserunt dolore ex.  
-                            </p>
+                            <Collapse
+                                titre="Descrition"
+                                texte={selectedId.description}
+                            />
                         </div>
                         <div className="housing__detailsArticleEquipmt">
-                            <h3>Equipement</h3>
-                            <p>
-                                Et irure et nulla cillum et officia labore irure. Pariatur anim sint voluptate laborum commodo aliquip nostrud velit reprehenderit quis commodo. Do minim sunt et Lorem in mollit cupidatat labore. Eiusmod commodo ut aliquip minim incididunt est deserunt dolore ex.  
-                            </p>
+                            <Collapse 
+                                titre="Equipement"
+                                texte={selectedId.equipments}
+                            />
                         </div>
                     </article>
                        
