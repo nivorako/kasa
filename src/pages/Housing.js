@@ -36,7 +36,11 @@ export default function Housing(){
                         </div>
                         <div className="housing__detailsHost">
                             <div className="housing__detailsHostName">
-                                <p>{selectedId.host.name} </p>
+                                <div>
+                                    <p>{selectedId.host.name.split(" ")[0]} </p>
+                                    <p>{selectedId.host.name.split(" ")[1]} </p>
+                                </div>
+                               
                                 <img src={selectedId.host.picture} alt=""></img>
                             </div>
                             <Rating 
