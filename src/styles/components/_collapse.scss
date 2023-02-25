@@ -1,0 +1,51 @@
+
+.collapseText,
+.collapseList{
+    width: 50%;
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 1rem;
+    &__header{
+        background-color: $primary;
+        border-radius: $borderRadius;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 1rem;
+    }
+    &__btn{
+        height: 16px;
+    }
+    h3{
+        margin: 0;
+        font-size: $base-font-size;
+    }
+    p{
+        font-size: $base-font-size;
+    }
+}
+
+.collapseList{
+    margin-left: 2rem;
+    ul{
+        list-style-type: none;
+    }
+    &__list{
+        padding: 0 1rem;
+    }
+}
+
+.collapseText{
+    margin-right: 2rem;
+    &__text{
+        padding: 0 1rem;
+    }
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.hidden{
+    display: none;
+}

@@ -11,7 +11,6 @@ import Collapse from "../components/Collapse"
 export default function Housing(){
     const {id} = useParams()
     let selectedId = dataHousing.find(data => data.id === id)
-    console.log("selected : ", selectedId)
     return (
         <div className="housing">
             <Header />
@@ -45,20 +44,22 @@ export default function Housing(){
                             />
                         </div>
                     </div>
-                    <article className="housing__detailsArticle">
-                        <div className="housing__detailsArticleDesc">
+                    <div className="housing__detailsArticle">
+                        
                             <Collapse
-                                titre="Descrition"
-                                texte={selectedId.description}
+                                title="Descrition"
+                                text={selectedId.description}
+                                type="HousingTexte"
                             />
-                        </div>
-                        <div className="housing__detailsArticleEquipmt">
+                        
+                        
                             <Collapse 
-                                titre="Equipement"
-                                texte={selectedId.equipments}
+                                title="Equipement"
+                                text={selectedId.equipments}
+                                type="liste"
                             />
-                        </div>
-                    </article>
+                       
+                    </div>
                        
                 </section>
             </main>
