@@ -1,6 +1,8 @@
+//import { useState } from "react"
 import arrow from "../assets/arrow.png"
 
 export default function Collapse({title, text, type}){
+    
     function handleTextOnClick(){
         const btn = document.querySelector('.collapseText__btn')
         const list = document.querySelector(".collapseText__text")

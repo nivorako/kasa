@@ -7,6 +7,7 @@ import dataHousing from "../data/housing.json"
 
 import { useParams } from "react-router-dom"
 import Collapse from "../components/Collapse"
+import Carrousel from "../components/Carrousel"
 
 export default function Housing(){
     const {id} = useParams()
@@ -15,10 +16,11 @@ export default function Housing(){
         <div className="housing">
             <Header />
             <main className="housing__content">
-                <section className="housing__carrousel">
-                    <img src={selectedId.cover} alt={selectedId.title} />
-                </section>
-
+                
+                <Carrousel
+                    imgSrc={selectedId.pictures}
+                    alt={selectedId.title}
+                />
                 <section className="housing__details">
                     <div className="housing__detailsHeader">
                         <div className="housing__detailsTitle">

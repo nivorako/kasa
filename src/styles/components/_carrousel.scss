@@ -1,0 +1,32 @@
+.carrousel{
+    width: 100%;
+    &__items{
+        width: 100%;
+        list-style-type: none; 
+    }
+    &__item{
+        display: none;
+        img{
+            width: 100%;
+            height: $bannerImgHeight*3;
+            object-fit: cover;
+            border-radius: $borderRadius;
+            object-position: center 44%;
+            filter: opacity(90%) brightness(70%);
+            
+        }
+
+    }
+    &__currentSlide{
+       width: 100%;
+       text-align: center;
+       span{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: .2rem;
+        background-color: black;
+        border-radius: 50%;
+       }
+    }
+}
