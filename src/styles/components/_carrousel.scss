@@ -6,16 +6,36 @@
     }
     &__item{
         display: none;
-        img{
-            width: 100%;
+        position: relative;
+
+    }
+    &__img{
+        width: 100%;
             height: $bannerImgHeight*3;
             object-fit: cover;
             border-radius: $borderRadius;
             object-position: center 44%;
             filter: opacity(90%) brightness(70%);
-            
-        }
-
+    }
+    &__rightA{
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        background-color: black;
+        width: 32px;
+        height: 16px;
+        transform: rotate(-90deg);
+        color: $primary;
+    }
+    &__leftA{
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        background-color: black;
+        width: 32px;
+        height: 16px;
+        transform: rotate(90deg);
+        color: $primary;
     }
     &__currentSlide{
        width: 100%;
@@ -25,8 +45,15 @@
         width: 30px;
         height: 30px;
         margin: .2rem;
-        background-color: black;
-        border-radius: 50%;
+        background-color: rgb(197, 197, 197);
+        border-radius: 50%; 
+       }
+       span.active{
+        background-color: rgb(120, 120, 120);
+       }
+       span:hover{
+        background-color: rgb(120, 120, 120);
+        cursor: pointer;
        }
     }
 }

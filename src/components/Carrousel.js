@@ -1,3 +1,5 @@
+import arrow from "../assets/arrow.png"
+
 import { useEffect, useState } from "react"
 
 export default function Carrousel({imgSrc,alt}){
@@ -18,6 +20,12 @@ export default function Carrousel({imgSrc,alt}){
         items[n-1].style.display = "block"
     }
     function currentSlide(n) {
+        const dots = document.getElementsByClassName("carrousel__dot")
+        const l = dots.length
+        for(let i = 0; i < l; i++){
+            dots[i].classList.remove("active")
+        }
+        dots[n].classList.add("active")
         showSlide(n)
         
     }
@@ -25,11 +33,22 @@ export default function Carrousel({imgSrc,alt}){
         <section className="carrousel">
             <ul className="carrousel__items">
                 {
-                    imgSrc.map((src, index) => (
-                        <li key={index} className="carrousel__item">
-                            <img src={src} alt={alt}/>
-                        </li>
-                    ))
+                    imgSrc.length > 1
+                        ? (imgSrc.map((src, index) => (
+                            <li key={index} className="carrousel__item">
+                                <img src={src} alt={alt} className="carrousel__img"/>
+                                <img src={arrow} alt="fleche droite" className="carrousel__rightA"></img>
+                                <img src={arrow} alt="fleche gauche" className="carrousel__leftA"></img>
+                            </li>
+                        )))
+                        :   (
+                            imgSrc.map((src, index) => (
+                                <li key={index} className="carrousel__item">
+                                    <img src={src} alt={alt} className="carrousel__img"/>
+                                    
+                                </li>
+                            ))
+                        )
                 } 
             </ul>
             <div className="carrousel__currentSlide">
