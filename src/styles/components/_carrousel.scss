@@ -27,6 +27,12 @@
         transform: rotate(-90deg);
         color: $primary;
     }
+    
+    &__rightA:hover{
+        cursor: pointer;
+        transform: rotate(-90deg);
+    }
+
     &__leftA{
         position: absolute;
         top: 50%;
