@@ -5,7 +5,11 @@ export default function NotFound(){
     return (
         <div className="notFound">
             <Header />
-            <h1>NOT FOUND</h1>
+            <div className="notFound__content">
+                <h1>404</h1>
+                <p>Oups! La page que vous demandez n'existe pas.</p>
+            </div>
+
             <Footer />
         </div>
     )
