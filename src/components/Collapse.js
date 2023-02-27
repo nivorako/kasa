@@ -16,9 +16,14 @@ export default function Collapse({title, text, type}){
        btn.classList.toggle("rotate")
        list.classList.toggle("hidden")
     }
-   
-    return type === "liste" ? (
-            <article className="collapseList">
+
+    function handleAboutOnClick(elt){
+        const btn = document.querySelector(".")
+    }
+
+    if(type === "liste"){
+        return (
+                    <article className="collapseList">
                 <div className="collapseList__header" onClick={() => handleListOnClick()} >
                     <h3>{title} </h3>
                     <img src={arrow} alt="" className="collapseList__btn"/>
@@ -34,15 +39,33 @@ export default function Collapse({title, text, type}){
                 </ul>
 
             </article>
-    ) : (
-        <article className="collapseText">
-            <div className="collapseText__header" onClick={() => handleTextOnClick()}>
-                <h3>{title} </h3>
-                <img src={arrow} alt="" className="collapseText__btn"/>
-            </div>
-            <div className="collapseText__text">
-                <p>{text} </p>
-            </div>
-        </article>
-    )
+        )
+    }
+    else if(type === "housingTexte"){
+        return (
+            <article className="collapseText">
+                <div className="collapseText__header" onClick={() => handleTextOnClick()}>
+                    <h3>{title} </h3>
+                        <img src={arrow} alt="" className="collapseText__btn"/>
+                    </div>
+                    <div className="collapseText__text">
+                        <p>{text} </p>
+                </div>
+         </article>
+        )
+    }
+    else if(type === "aboutTexte"){
+        return (
+            <article className="collapseAbout">
+                <div className="collapseAbout__header" onClick={() => handleAboutOnClick({title})}>
+                    <h3>{title} </h3>
+                    <img src={arrow} alt="" className={`collapseAbout__btn${title}`} />
+                </div>
+                <div className={ `collapseAbout__text${title}`}>
+                    <p>{text} </p>
+                </div>
+            </article>
+        )
+    }
+   
 }

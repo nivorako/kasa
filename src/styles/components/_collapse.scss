@@ -1,4 +1,4 @@
-
+.collapseAbout,
 .collapseText,
 .collapseList{
     width: 50%;
@@ -29,7 +29,10 @@
         padding: 0 1rem;
     }
 }
-
+.collapseAbout{
+    width: 80%;
+    margin-top: 1rem;
+}
 .collapseList{
     width: 100%;
     margin-left: 2rem;
