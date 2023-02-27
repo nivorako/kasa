@@ -79,6 +79,7 @@
     }
     &__detailsArticle{
         display: flex;
+        justify-content: space-between;
         margin-bottom: 1rem;
         @media screen and (max-width: 800px) {
             flex-direction: column;

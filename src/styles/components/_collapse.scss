@@ -1,64 +1,38 @@
-.collapseAbout,
-.collapseText,
-.collapseList{
-    width: 50%;
-    background-color: rgb(247, 247, 247);
+.collapse{
+    width: 45%;
+    background-color: rgb(250, 249, 249);
     border-radius: $borderRadius;
-    margin-bottom: 1rem;
     &__header{
         background-color: $primary;
-        border-radius: $borderRadius;
-        color: white;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: .5rem 1rem;
-    }
-    &__header:hover{
-        cursor: pointer;
-    }
-    &__btn{
-        height: 16px;
-    }
-    h3{
-        margin: 0;
-        font-size: $base-font-size;
-    }
-    p{
-        font-size: $base-font-size;
         padding: 0 1rem;
+        border-radius: $borderRadius;
+        h3{
+            color: white;
+            font-size: $base-font-size;
+        }
+        img{
+            height: 16px;
+        }
     }
-}
-.collapseAbout{
-    width: 80%;
-    margin-top: 1rem;
-}
-.collapseList{
-    width: 100%;
-    margin-left: 2rem;
-    ul{
-        list-style-type: none;
-    }
-   
-    @media screen and (max-width: 800px) {
-        margin: 0 0 1rem 0;
+    &__paragraph{
+
+        p{
+            padding: 0 1rem 1rem 1rem;
+            font-size: $base-font-size;
+        }
+        li{
+            list-style-type: none;
+        }
     }
 }
 
-.collapseText{
-    width: 100%;
-    margin-right: 2rem;
-    
-   
-    @media screen and (max-width: 800px) {
-        margin: 0 0 1rem 0 ;
-    }
+.arrowUp{
+    transform: rotate(0deg);
 }
 
-.rotate{
+.arrowDown{
     transform: rotate(180deg);
-}
-
-.hidden{
-    display: none;
 }

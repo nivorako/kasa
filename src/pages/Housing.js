@@ -55,14 +55,14 @@ export default function Housing(){
                             <Collapse
                                 title="Descrition"
                                 text={selectedId.description}
-                                type="housingTexte"
+                                type="text"
                             />
                         
                         
                             <Collapse 
                                 title="Equipement"
                                 text={selectedId.equipments}
-                                type="liste"
+                                type="list"
                             />
                        
                     </div>

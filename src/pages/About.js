@@ -12,18 +12,25 @@ export default function About(){
         <div className="about">
             <Header />
             <main className="about__content">
-                <Banner 
-                    imgSrc={bannerAbout}
-                    altTxt="paysage"
-                />
-                {about.map((elt) => (
-                    <Collapse
-                        title={elt.title}
-                        type="aboutTexte"
-                        text={elt.description}
+                <div className="about__contentHeader">
+                    <Banner 
+                        imgSrc={bannerAbout}
+                        altTxt="paysage"
                     />
-                    
-                ))}
+                </div>
+                
+                <div className="about__contentMain">
+                    {about.map((elt, index) => (
+                        <Collapse
+                            title={elt.title}
+                            type="text"
+                            text={elt.description}
+                            key={index}
+                        />
+                        
+                    ))}
+                </div>
+                
             </main>
             <Footer />
         </div>
