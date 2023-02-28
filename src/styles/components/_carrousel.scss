@@ -30,7 +30,7 @@
     
     &__rightA:hover{
         cursor: pointer;
-        transform: rotate(-90deg);
+        transform: scale(1.5) rotate(-90deg);
     }
 
     &__leftA{
@@ -42,6 +42,10 @@
         height: 16px;
         transform: rotate(90deg);
         color: $primary;
+    }
+    &__leftA:hover{
+        cursor: pointer;
+        transform: scale(1.5) rotate(90deg)
     }
     &__currentSlide{
        width: 100%;
