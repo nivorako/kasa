@@ -14,7 +14,7 @@ export default function Collapse({title, text, type}){
             <div className="collapse__paragraph">
                 {
                     type === "text" ? (
-                        <p>{text} </p>
+                        <p>{text}</p>
                     ) : (
                         <ul>
                             {text.map((elt, index) => (
