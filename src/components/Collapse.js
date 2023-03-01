@@ -1,7 +1,7 @@
 import { useState } from "react"
 import arrow from "../assets/arrow.png"
 
-export default function Collapse({title, text, type}){
+export default function Collapse({title, text, type, id}){
 
     const [isOpen, setIsOpen] = useState(true)
    
@@ -18,7 +18,7 @@ export default function Collapse({title, text, type}){
                     ) : (
                         <ul>
                             {text.map((elt, index) => (
-                                <li key={`${elt}--${index}`}>
+                                <li key={index}>
                                     <p>{elt} </p>
                                 </li>
                             ))}
@@ -27,12 +27,12 @@ export default function Collapse({title, text, type}){
                 }
             </div>
         </article>
-    ) :[
-        <article className="collapse">
+    ) :
+        (<article className="collapse">
             <div className="collapse__header" onClick={() => setIsOpen(true)}>
                 <h3>{title} </h3>
                 <img src={arrow} alt="" className="arrowDown"/>
             </div>
         </article>
-    ]
+        )
 }

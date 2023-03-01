@@ -2,17 +2,17 @@
 import Footer from "../components/Footer"
 import Header from "../components/Header" 
 import Rating from "../components/Rating"
-
-import dataHousing from "../data/housing.json"
-
-import { useParams } from "react-router-dom"
 import Collapse from "../components/Collapse"
 import Carrousel from "../components/Carrousel"
+import dataHousing from "../data/housing.json"
+
+import { useParams, redirect } from "react-router-dom"
 
 export default function Housing(){
     const {id} = useParams()
     let selectedId = dataHousing.find(data => data.id === id)
-    return (
+    
+    return selectedId ? (
         <div className="housing">
             <Header />
             <main className="housing__content">
@@ -53,6 +53,7 @@ export default function Housing(){
                     <div className="housing__detailsArticle">
                         
                             <Collapse
+                                
                                 title="Descrition"
                                 text={selectedId.description}
                                 type="text"
@@ -60,6 +61,7 @@ export default function Housing(){
                         
                         
                             <Collapse 
+                               
                                 title="Equipement"
                                 text={selectedId.equipments}
                                 type="list"
@@ -71,5 +73,7 @@ export default function Housing(){
             </main>
             <Footer />
         </div>
+    ) : (
+        redirect("/*")
     )
 }

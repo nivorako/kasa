@@ -11,8 +11,8 @@ export default function About(){
     return(
         <div className="about">
             <Header />
-            <main className="about__content">
-                <div className="about__contentHeader">
+            <main className="about__content" >
+                <div className="about__contentHeader" >
                     <Banner 
                         imgSrc={bannerAbout}
                         altTxt="paysage"

@@ -1,23 +1,26 @@
- import star from "../assets/star.png"
+ import starRed from "../assets/starRed.png"
+ import starGrey from "../assets/starGrey.png"
 
 export default function Rating({rating}){
-    let tabRating = [] 
-    for( let i = 1; i <= rating; i++){
-        tabRating.push(i)
-    }
+    let tabRating = [1,2,3,4,5] 
+    
    
     return (
-          <div className="rating">
+        <div className="rating">
             {
                 tabRating.map((tabElt, index) => (
-                    tabElt > 0 ? 
+                    rating >= tabElt ? 
                         <span key={index} className="rating__img">
-                            <img  src={star} alt="" />
+                            <img  src={starRed} alt="red star" />
                         </span> 
-                    : null
+                    :(
+                        <span key={index} className="rating__imgGrey">
+                            <img  src={starGrey} alt="grey star" />
+                        </span> 
+                    )
                 ))
             } 
-          </div>
+        </div>
     )
     
 }
