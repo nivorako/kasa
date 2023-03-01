@@ -10,52 +10,43 @@ export default function Carrousel({imgSrc,alt}){
     })
 
     function showSlide(n){
-        
         const items = document.getElementsByClassName("carrousel__item")
+
         const length = items.length
         for(let i = 0; i < length; i++){
             items[i].style.display = "none"
         }
+        
         items[n].style.display = "block"
+       
     }
 
-    function currentSlide(n) {
-        const dots = document.getElementsByClassName("carrousel__dot")
-        const l = dots.length
-        for(let i = 0; i < l; i++){
-            dots[i].classList.remove("active")
-        }
-        dots[n].classList.add("active")
-        showSlide(n)  
-    }
     function handleOnClickRightA(n){
-       
+
         const items = document.getElementsByClassName("carrousel__item")
         const length = items.length
-        
-        for(let i = 0; i < length; i++){
-            items[i].style.display = "none"
+
+        if(n < length - 1) {
+            n++
+            showSlide(n)
         }
-        if(n  === length - 1) {
-            n = 0
-        }
-        
-        items[n + 1].style.display = "block"
+        else if(n === length - 1) showSlide(0)      
     }
 
     function handleOnClickLeftA(n){
         const items = document.getElementsByClassName("carrousel__item")
         const length = items.length
-        
-        for(let i = 0; i < length; i++){
-            items[i].style.display = "none"
+        console.log("n avant : ", n)
+        if(n > 0) {
+            n--
+            showSlide(n)
         }
-        if(n  === 0) {
-            console.log('n < length : ', n)
-            n = length
+        else if(n === 0) {
+            n = length - 1
+            showSlide(n)
         }
-        
-        items[n - 1].style.display = "block"
+        console.log('n après : ', n)
+        showSlide(n)
     }
 
     return(
@@ -80,6 +71,7 @@ export default function Carrousel({imgSrc,alt}){
                                     className="carrousel__leftA"
                                     onClick={() => handleOnClickLeftA(index)} 
                                 />
+                                <p className="carrousel__count">{index + 1} / {imgSrc.length} </p>
                             </li>
                         )))
                         :   (
@@ -92,20 +84,6 @@ export default function Carrousel({imgSrc,alt}){
                         )
                 } 
             </ul>
-            <div className="carrousel__currentSlide">
-                {
-                    imgSrc.map((src, index) => (
-                        src 
-                        ?   <span 
-                                key={index} 
-                                className="carrousel__dot"
-                                onClick={() => currentSlide(index)}
-                            >
-                            </span> 
-                        :   null
-                    ))
-                }
-            </div>
             
         </section>
     )

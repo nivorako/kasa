@@ -17,6 +17,12 @@
             object-position: center 44%;
             filter: opacity(90%) brightness(70%);
     }
+    &__count{
+        position: absolute;
+        bottom: .5rem;
+        left: 50%;
+        color: white;
+    }
     &__rightA{
         position: absolute;
         top: 50%;
