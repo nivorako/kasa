@@ -6,11 +6,13 @@ import Collapse from "../components/Collapse"
 import Carrousel from "../components/Carrousel"
 import dataHousing from "../data/housing.json"
 
-import { useParams, redirect } from "react-router-dom"
+import { useParams } from "react-router-dom"
+import NotFound from "./NotFound"
 
 export default function Housing(){
     const {id} = useParams()
-    let selectedId = dataHousing.find(data => data.id === id)
+    let selectedId = dataHousing.find(data => (data.id === id))
+    console.log("typeof id: ", typeof id)
     
     return selectedId ? (
         <div className="housing">
@@ -74,6 +76,7 @@ export default function Housing(){
             <Footer />
         </div>
     ) : (
-        redirect("/*")
+        <NotFound />
     )
+    
 }

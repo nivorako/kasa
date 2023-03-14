@@ -36,7 +36,7 @@ export default function Carrousel({imgSrc,alt}){
     function handleOnClickLeftA(n){
         const items = document.getElementsByClassName("carrousel__item")
         const length = items.length
-        console.log("n avant : ", n)
+        
         if(n > 0) {
             n--
             showSlide(n)
@@ -45,7 +45,7 @@ export default function Carrousel({imgSrc,alt}){
             n = length - 1
             showSlide(n)
         }
-        console.log('n après : ', n)
+    
         showSlide(n)
     }
 

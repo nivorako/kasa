@@ -27,7 +27,7 @@ function App() {
                     element={<Housing />} 
                 />
                 <Route 
-                    path="*" 
+                    path="/*" 
                     element={<NotFound />} 
                 />
             </Routes>
