@@ -28,7 +28,7 @@ export default function Collapse({title, text, type}){
             </div>
         </article>
     ) :
-        (<article className="collapse">
+        (<article className="collapse whiteBgrColor"> 
             <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
                 <h3>{title} </h3>
                 <img src={arrow} alt="" className="arrowDown"/>

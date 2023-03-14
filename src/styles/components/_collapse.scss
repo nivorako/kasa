@@ -1,7 +1,7 @@
 .collapse{
     width: 45%;
-    background-color: rgb(250, 249, 249);
     border-radius: $borderRadius;
+    background-color: rgb(250, 249, 249);
     @media screen and (max-width: 800px) {
         width: 100%;
         margin-bottom: 1rem;
@@ -42,4 +42,8 @@
 
 .arrowDown{
     transform: rotate(180deg);
+}
+
+.whiteBgrColor{
+    background-color: white;
 }
