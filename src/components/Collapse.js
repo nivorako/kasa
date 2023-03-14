@@ -1,13 +1,13 @@
 import { useState } from "react"
 import arrow from "../assets/arrow.png"
 
-export default function Collapse({title, text, type, id}){
+export default function Collapse({title, text, type}){
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
    
     return isOpen ? (
         <article className="collapse">
-            <div className="collapse__header" onClick={() => setIsOpen(false)}>
+            <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
                 <h3>{title} </h3>
                 <img src={arrow} alt="" className="arrowUp"/>
             </div>
@@ -29,7 +29,7 @@ export default function Collapse({title, text, type, id}){
         </article>
     ) :
         (<article className="collapse">
-            <div className="collapse__header" onClick={() => setIsOpen(true)}>
+            <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
                 <h3>{title} </h3>
                 <img src={arrow} alt="" className="arrowDown"/>
             </div>
