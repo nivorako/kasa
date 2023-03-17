@@ -16,6 +16,8 @@ export default function About(){
                     <Banner 
                         imgSrc={bannerAbout}
                         altTxt="paysage"
+                        title=""
+                        about={true}
                     />
                 </div>
                 

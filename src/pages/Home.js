@@ -16,6 +16,7 @@ export default function Home() {
                     imgSrc={bannerHome}
                     title="Chez vous, partout et ailleurs"
                     altTxt="paysage terre et mer"
+                    about={false}
                 />
                 <Cards />
             </main>

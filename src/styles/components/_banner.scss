@@ -45,3 +45,48 @@
     }
 }
 
+.banner__about{
+    width: 100%;
+    height: $bannerImgHeight;
+    position: relative;
+    img{
+        width: 100%;
+        height: $bannerImgHeight;
+        object-fit: cover;
+        border-radius: $borderRadius;
+        object-position: center 44%;
+        filter: opacity(90%) brightness(70%);
+        @media screen and (max-width: 600px) {
+            height: $bannerImgHeight; 
+        }
+    }
+    h1{
+        width: 100%;
+        position: absolute;
+        top: 1rem;
+        display: flex;
+        justify-content: center;
+        @media screen and (max-width: 800px) {
+            top: 0;
+            align-items: start;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+    }
+    h1 p{
+        width: auto;
+        padding: 0;
+        margin: 0 10px 0 0;
+        color: white;
+        font-size: $base-font-size*3;
+        font-weight: 500;
+        text-align: center;
+        
+        @media screen and (max-width: 780px) {
+            top: 1rem;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: $base-font-size*2;
+        }
+    }
+}
