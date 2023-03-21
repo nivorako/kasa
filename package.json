@@ -36,10 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint": "^8.34.0",
-    "gh-pages": "^5.0.0",
-    "prettier": "^2.8.4"
   }
 }
