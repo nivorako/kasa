@@ -9,7 +9,7 @@ export default function Collapse({title, text, type}){
         <article className="collapse">
             <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
                 <h3>{title} </h3>
-                <img src={arrow} alt="" className="arrowUp"/>
+                <img src={arrow} alt="" className="arrowDown"/>
             </div>
             <div className="collapse__paragraph">
                 {
@@ -31,7 +31,7 @@ export default function Collapse({title, text, type}){
         (<article className="collapse whiteBgrColor"> 
             <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
                 <h3>{title} </h3>
-                <img src={arrow} alt="" className="arrowDown"/>
+                <img src={arrow} alt="" className="arrowUp"/>
             </div>
         </article>
         )

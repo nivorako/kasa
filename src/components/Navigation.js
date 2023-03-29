@@ -6,7 +6,7 @@ function Navigation() {
             <ul>
                 <li>
                     <NavLink to="/" className="navigation__nav">
-                        <span> Acceuil</span>
+                        <span> Accueil</span>
                     </NavLink>
                 </li>
                 <li>

@@ -9,7 +9,8 @@
         object-fit: cover;
         border-radius: $borderRadius;
         object-position: center 44%;
-        filter: opacity(90%) brightness(70%);
+        // filter: opacity(90%) brightness(70%);
+        
         @media screen and (max-width: 600px) {
             height: $bannerImgHeight*3/4; 
         }
