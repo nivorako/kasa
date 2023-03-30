@@ -2,8 +2,7 @@
 .banner{
     position: relative;
     width: 100%;
-    height: $bannerImgHeight;
-    position: relative;
+    height: auto;
     &__img{
         position: relative;
         overflow: hidden;
@@ -14,10 +13,10 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: $bannerImgHeight;
+        height: 95%;
         border-radius: $borderRadius;
-        background: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,0.1));
-        mix-blend-mode: multiply;
+        background: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,0.3));
+        mix-blend-mode:multiply;
         z-index: 10;
     }
     img{
@@ -55,6 +54,7 @@
         font-size: $base-font-size*3;
         font-weight: 500;
         text-align: center;
+        z-index: 20;
         
         @media screen and (max-width: 780px) {
             top: 1rem;
