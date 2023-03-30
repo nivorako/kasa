@@ -5,13 +5,14 @@ export default function Collapse({title, text, type}){
 
     const [isOpen, setIsOpen] = useState(false)
    
-    return isOpen ? (
+    return  (
         <article className="collapse">
             <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
                 <h3>{title} </h3>
-                <img src={arrow} alt="" className="arrowDown"/>
+                {isOpen ? <img src={arrow} alt="" className="arrowDown"/> : <img src={arrow} alt="" className="arrowup"/>}
             </div>
-            <div className="collapse__paragraph">
+          {  isOpen ? (
+                <div className="collapse__paragraph">
                 {
                     type === "text" ? (
                         <p>{text}</p>
@@ -26,13 +27,7 @@ export default function Collapse({title, text, type}){
                     )
                 }
             </div>
+            ) : null}
         </article>
-    ) :
-        (<article className="collapse whiteBgrColor"> 
-            <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
-                <h3>{title} </h3>
-                <img src={arrow} alt="" className="arrowUp"/>
-            </div>
-        </article>
-        )
+    ) 
 }

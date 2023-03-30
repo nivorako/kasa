@@ -21,6 +21,9 @@
         bottom: .5rem;
         left: 50%;
         color: white;
+        @media screen and (max-width: 800px){
+        display: none;
+        }
     }
     &__rightA{
         position: absolute;

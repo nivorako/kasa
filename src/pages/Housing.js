@@ -12,7 +12,6 @@ import NotFound from "./NotFound"
 export default function Housing(){
     const {id} = useParams()
     let selectedId = dataHousing.find(data => (data.id === id))
-    console.log("typeof id: ", typeof id)
     
     return selectedId ? (
         <div className="housing">
