@@ -30,15 +30,15 @@
         top: 50%;
         right: 1rem;
         background-color: transparent;
-        width: 32px;
-        height: 16px;
+        width: 55px;
+        height: auto;
         transform: rotate(-90deg);
         color: $primary;
     }
     
     &__rightA:hover{
         cursor: pointer;
-        transform: scale(1.5) rotate(-90deg);
+       // transform: scale(1.5) rotate(-90deg);
     }
 
     &__leftA{
@@ -46,14 +46,14 @@
         top: 50%;
         left: 1rem;
         background-color: transparent;
-        width: 32px;
-        height: 16px;
+        width: 55px;
+        height: auto;
         transform: rotate(90deg);
         color: $primary;
     }
     &__leftA:hover{
         cursor: pointer;
-        transform: scale(1.5) rotate(90deg)
+        //transform: scale(1.5) rotate(90deg)
     }
     &__currentSlide{
        width: 100%;

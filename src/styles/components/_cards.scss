@@ -1,18 +1,17 @@
 .cards{
+    max-width: 1024;
     margin-top: 20px;
     @media screen and (max-width: 600px) {
         margin-top: 0;
     }
     &__items{
-        //max-width: 1400px;       
+               
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
     &__item{
         position: relative;
-        flex-basis: 30%;
-        max-width: 350px;
         height: 300px;
         margin: 20px;
         border-radius: $borderRadius;
