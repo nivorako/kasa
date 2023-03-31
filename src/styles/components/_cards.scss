@@ -1,11 +1,10 @@
 .cards{
-    max-width: 1980px;
+    max-width: 1366px;
     margin-top: 20px;
     @media screen and (max-width: 600px) {
         margin-top: 0;
     }
-    &__items{
-               
+    &__items{          
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
