@@ -1,4 +1,5 @@
 import arrow from "../assets/arrow.png"
+import vector from "../assets/vector.png"
 
 import { useEffect } from "react"
 
@@ -59,14 +60,14 @@ export default function Carrousel({imgSrc,alt}){
                                 <img src={src} alt={alt} className="carrousel__img"/>
                                 
                                 <img 
-                                    src={arrow} 
+                                    src={vector} 
                                     alt="fleche droite" 
                                     className="carrousel__rightA" 
                                     onClick={() => handleOnClickRightA(index)}  
                                 />
                                 
                                 <img 
-                                    src={arrow} 
+                                    src={vector} 
                                     alt="fleche gauche" 
                                     className="carrousel__leftA"
                                     onClick={() => handleOnClickLeftA(index)} 
