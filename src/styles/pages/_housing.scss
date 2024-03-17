@@ -20,6 +20,30 @@
             filter: opacity(90%) brightness(70%);
         }
     }
+    &__booking{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        background-color: $primary;
+        color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+    }
+    &__bookingIcon:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        z-index: 150;
+    }
+    &__calendar{
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+        background-color: white;
+        position: fixed;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%);
+    }
     &__details{
         width: 100%;
     }
@@ -95,4 +119,13 @@
         }
        
     }
+}
+
+.hide{
+   display: none;
+}
+
+.show{
+    display: block;
+    z-index: 100;
 }

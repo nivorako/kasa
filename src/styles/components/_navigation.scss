@@ -1,11 +1,15 @@
 .navigation{
-    width: 30%;
+    width: 50%;
     margin-left: 0;
     transition: ease all .5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @media screen and (max-width: 800px) {
         width: 50%;
     }
     ul{ 
+        width: 50%;
         list-style-type: none;
         display: flex;
         justify-content: space-between;
@@ -20,5 +24,32 @@
     &__nav.active{
         border-bottom: thin solid $primary;
     }
+    &__connect:hover{
+        cursor: pointer;
+    }
+    &__modal{
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+        padding: 2rem;
+        background-color: white;
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        transition: all ease .5s;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .5s;
+        border-radius: $borderRadius;
+    }
+    &__modal:hover{
+        background-color: rgb(244, 243, 243);
+    }
 }
+
 

@@ -10,14 +10,16 @@ export default function Cards(){
             <ul className="cards__items">
                 {
                 dataHousing.map(({ id, title, cover }) => (
-                    <Link key={id} to={`/Housing/${id}`}>
-                        <li  className="cards__item">
-                            <div className="cards__img">
-                                <img src={cover}  alt="" />            
-                            </div>
-                            <h2>{title}</h2>
+                    
+                        <li  className="cards__item"  key={id}>
+                            <Link to={`/Housing/${id}`}>
+                                <div className="cards__img">
+                                    <img src={cover}  alt="" />            
+                                </div>
+                            </Link>
+                            <h2>{title}</h2>                           
                         </li>
-                    </Link>
+                    
                 ))}
             </ul>
         </section>

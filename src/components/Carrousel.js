@@ -1,4 +1,4 @@
-import arrow from "../assets/arrow.png"
+//import arrow from "../assets/arrow.png"
 import vector from "../assets/vector.png"
 
 import { useEffect } from "react"

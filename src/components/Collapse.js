@@ -11,7 +11,7 @@ export default function Collapse({title, text, type}){
                 <h3>{title} </h3>
                 {isOpen ? <img src={arrow} alt="" className="arrowDown"/> : <img src={arrow} alt="" className="arrowup"/>}
             </div>
-          {  isOpen ? (
+            {  isOpen ? (
                 <div className="collapse__paragraph">
                 {
                     type === "text" ? (
